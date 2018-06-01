@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Url 仓库</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>链接</td>
+            <td>介绍</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range .}}
+        <tr>
+            <td>{{.Id}}</td>
+            <td><a href="{{.Url}}" target="_blank">{{.Url}}</a></td>
+            <td>{{.Introduce}}</td>
+        </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</div>
+</body>
+<script href="/static/js/jquery-3.3.1.min.js"></script>
+<script href="/static/js/bootstrap.min.js"></script>
+<style>
+    .main {
+        text-align: left;
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+</html>
